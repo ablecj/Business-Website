@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import GetConsultBtn from "../common/GetConsultBtn";
 
 const Navbar: React.FC = () => {
   // state management for hamburger menu
@@ -26,12 +27,12 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`
-      w-full top-0 left-0 z-50 transition-all duration-300
-    ${scrolled ? "fixed bg-white shadow-md" : "absolute bg-transparent"}
+      w-full top-0 left-0 z-50 transition-all duration-300 
+    ${scrolled ? "fixed bg-white/15 backdrop-blur-lg shadow-xl " : "absolute bg-transparent"}
   `}
     >
       <nav
-        className=" flex my-6 items-center justify-between h-16 px-4 sm:px-6 md:px-8 lg:px-[112px]"
+        className=" flex my-3 items-center justify-between h-16 px-4 sm:px-6 md:px-8 lg:px-[112px]"
         aria-label="Main navigation"
       >
         {/* LEFT: Logo */}
@@ -78,8 +79,8 @@ const Navbar: React.FC = () => {
 
         {/* RIGHT: CTA (Desktop) */}
         <div className="hidden md:flex">
-          <Link
-            href="/consultation"
+          {/* <Link
+            href="/contact"
             className="mx-auto
             flex items-center justify-center gap-[6px]
             p-4
@@ -96,7 +97,8 @@ const Navbar: React.FC = () => {
               width={16}
               height={16}
             />
-          </Link>
+          </Link> */}
+          <GetConsultBtn />
         </div>
 
         {/* Mobile Menu Button */}
@@ -213,12 +215,26 @@ const Navbar: React.FC = () => {
               </li>
             </ul>
 
-            <Link
-              href="/consultation"
-              className="mt-2 inline-flex justify-center rounded-md bg-black px-5 py-2 text-sm font-medium text-white"
+            {/* <Link
+              href="/contact"
+              className="mx-auto
+            flex items-center justify-center gap-[6px]
+            p-4
+            rounded-md
+            bg-gradient-to-r from-[#151D26] to-[#2B3D4F]
+            text-sm font-medium text-white
+            transition-opacity duration-200
+            hover:opacity-80"
             >
               Get Consultation
-            </Link>
+              <Image
+              src="/assets/icons/consult_arrow.svg"
+              alt="right arrow"
+              width={12}
+              height={12}
+            />
+            </Link> */}
+            <GetConsultBtn />
           </div>
         </div>
       )}
