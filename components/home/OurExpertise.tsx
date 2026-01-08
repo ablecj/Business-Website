@@ -14,21 +14,21 @@ const OurExpertise = () => {
       title: "Web Development",
       description:
         "Scalable and high-performance web solutions tailored to your business needs.",
-      image: "/assets/images/expertise/web.jpg",
+      image: "/assets/images/Bussnes_ser_img/WEB_DEV.png",
       href: "/expertise/web-development",
     },
     {
       title: "UI/UX Design",
       description:
         "User-centered designs that enhance engagement and usability.",
-      image: "/assets/images/expertise/uiux.jpg",
+      image: "/assets/images/Bussnes_ser_img/UI_UX.png",
       href: "/expertise/ui-ux",
     },
     {
       title: "Mobile Applications",
       description:
         "Cross-platform mobile applications built for performance and scale.",
-      image: "/assets/images/expertise/mobile.jpg",
+      image: "/assets/images/Bussnes_ser_img/MOB_APP.png",
       href: "/expertise/mobile-apps",
     },
   ];
@@ -39,28 +39,28 @@ const OurExpertise = () => {
       title: "Cloud Solutions",
       description:
         "Secure, scalable cloud infrastructure and DevOps solutions.",
-      image: "/assets/images/expertise/cloud.jpg",
+      image: "/assets/images/Bussnes_ser_img/Cloud.png",
       href: "/expertise/cloud",
     },
     {
       title: "E-commerce",
       description:
         "End-to-end e-commerce platforms optimized for conversion.",
-      image: "/assets/images/expertise/ecommerce.jpg",
+      image: "/assets/images/Bussnes_ser_img/ECOMM.png",
       href: "/expertise/ecommerce",
     },
     {
       title: "AI & Automation",
       description:
         "Intelligent automation solutions to streamline your operations.",
-      image: "/assets/images/expertise/ai.jpg",
+      image: "/assets/images/Bussnes_ser_img/AI.png",
       href: "/expertise/ai",
     },
   ];
 
 
     return (
-        <section className="min-h-screen bg-[url('/assets/images/BG_2.svg')] bg-no-repeat bg-cover bg-center">
+        <section className="h-auto bg-[url('/assets/images/BG_2.svg')] bg-no-repeat bg-cover bg-center">
             <PageContainer>
                 <div className="Title_section_Expertise mt-10 sm:mt-16 md:mt-20 lg:mt-24 ">
                     <h2 className='font-geist font-normal
@@ -86,7 +86,7 @@ const OurExpertise = () => {
         {/* Row 2 - Center Button */}
         <div className="mt-14 flex justify-center">
           <Link
-      href='/'
+      href='/contact'
       className={`
        box-border
     flex items-center justify-center
@@ -95,7 +95,7 @@ const OurExpertise = () => {
     mx-auto
 
     rounded-lg
-    bg-[#FBFDFE]
+    bg-transparent
     border border-gray-200
     shadow-sm
 

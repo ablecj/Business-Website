@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export type ExpertiseCardProps = {
   title: string;
@@ -15,16 +18,32 @@ export const ExpertiseCard = ({
   href,
 }: ExpertiseCardProps) => {
   return (
-    <div className="group overflow-hidden rounded-2xl bg-transparent shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="relative h-48 w-full">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+    <motion.div
+      whileHover="hover"
+      className="max-w-[392px] group overflow-hidden rounded-2xl bg-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    >
+      {/* Image */}
+      <div className="relative h-48 w-full overflow-hidden">
+        <motion.div
+          variants={{
+            hover: { scale: 1.1, scaleX: -1 }, // horizontal flip
+          }}
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-contain"
+          />
+        </motion.div>
       </div>
 
+      {/* Content */}
       <div className="p-6">
         <h3 className="text-lg sm:text-xl font-semibold text-[#151D26] mb-2">
           {title}
@@ -34,10 +53,13 @@ export const ExpertiseCard = ({
           {description}
         </p>
 
-        <Link href={href} className="inline-flex items-center text-blue-600 font-medium hover:underline">
+        <Link
+          href={href}
+          className="inline-flex items-center text-blue-600 font-medium hover:underline"
+        >
           Learn More →
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
