@@ -106,7 +106,10 @@ const HomeBanner = () => {
             </motion.p>
           </AnimatePresence>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:max-w-[520px] md:max-w-[592px]">
+          <motion.div  initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.6, delay: 0.2 }} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:max-w-[520px] md:max-w-[592px]">
             <GetConsultBtn />
             <Link
               href="/learn-more"
@@ -114,11 +117,14 @@ const HomeBanner = () => {
             >
               View Case Studies
             </Link>
-          </div>
+          </motion.div>
         </div>
 
         {/* Partners Slider */}
-        <div className="mt-12 sm:mt-16 w-full">
+        <motion.div  initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.6, delay: 0.2 }} className="mt-12 sm:mt-16 w-full">
           <p className="mb-6 font-geist font-semibold text-[24px] leading-[30px] text-center text-[#151D26]">
             join our ever growing client list
           </p>
@@ -145,7 +151,7 @@ const HomeBanner = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
 
       </PageContainer>
     </section>

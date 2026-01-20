@@ -1,6 +1,7 @@
 import HomeBanner from "@/components/home/HomeBanner";
 import OurExpertise from "@/components/home/OurExpertise";
 import OurImpact from "@/components/home/OurImpact";
+import WhyChoose from "@/components/home/WhyChoose";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <HomeBanner />
       <OurExpertise />  
       <OurImpact />
+      <WhyChoose />
     </main>
   );
 }

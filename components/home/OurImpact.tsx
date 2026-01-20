@@ -207,10 +207,10 @@ const OurImpact = () => {
               md:mt-8
               lg:mt-[45px]
               xl:mt-[45px]
-              flex justify-center flex-col items-center mb-6
-              sm:mb-10
-              md:mb-14
-              lg:mb-24"
+              flex justify-center flex-col items-center pb-6
+              sm:pb-10
+              md:pb-14
+              lg:pb-24"
         >
         <h2 className=" font-['Geist']
               font-bold
